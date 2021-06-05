@@ -3814,7 +3814,11 @@
 
             function kiabtn2() {
                 if (vincheckin()) {
-                    window.open("https://www.kia.com/us/en/data/dealerinventory/windowsticker/" + vin)
+                        var winkia = window.open("https://www.kia.com", '_blank');
+        		setTimeout(function () {
+            			winkia.close();
+            			window.open("https://www.kia.com/us/en/data/dealerinventory/windowsticker/" + vin);
+        		}, 2000);
                 };
             };
 
